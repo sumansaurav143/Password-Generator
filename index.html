@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pw-container">
+        <div class="pw-header">
+            <div class="pw">
+                <span id="pw"> Password Here</span>
+                <button id="copy">Copy</button>
+            </div>
+        </div>
+        <div class="pw-body">
+            <div class="form-control2">
+                <div class="r-div">
+                    <label for="size">PASSWORD LENGTH</label>
+                    <output id="range_show">0</output>
+                </div>
+              <div class="rangebar">
+                <input class="r" type="range" value="0" min="1" max="15" oninput="document.getElementById('range_show').value = this.value">
+              </div>
+            </div>
+            <div class="form">
+                <div class="form-control">
+                    <div>
+                        <h5>Contain Uppercase Letters</h5>
+                    </div>
+                    <label class="switch">
+                        <input id="upperLetter" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <div>
+                        <h5>Contain Lowercase Letters</h5>
+                    </div>
+                    <label class="switch">
+                        <input id="lowerLetter" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <div>
+                        <h5>Contain Numbers</h5>
+                    </div>
+                    <label class="switch">
+                        <input id="number" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="form-control">
+                    <div>
+                        <h5>Contain Symbol</h5>
+                    </div>
+                    <label class="switch">
+                        <input id="symbol" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn-generate" id="generate" onclick="GeneratePass()">Generate Password</button>
+        </div>
+    </div>
+
+    <script src="passgen.js"></script>
+</body>
+
+</html>
